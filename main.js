@@ -22,7 +22,6 @@
 // for (let i = 0; i < 5; i++) {
 // your code here!
 // }
-<script>
 
 function getComputerChoice() {
   let choices = ["rock", "paper", "scissors"];
@@ -74,4 +73,3 @@ function playerPrompt() {
     game(1);
   }
 }
-</script>
