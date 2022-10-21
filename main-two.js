@@ -13,6 +13,17 @@ function getComputerChoice() {
 getComputerChoice();
 console.log(computerSelection);
 
+let playerPrompt = prompt("What is your move?");
+let playerSelection = playerPrompt.toLowerCase();
+
+function playRound(playerSelection, computerSelection) {}
+
+function game() {
+  for (let i = 0; i < 5; i++) {
+    playRound();
+  }
+}
+
 // function playRound(playerSelection, computerSelection) {
 // your code here!
 // }
