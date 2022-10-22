@@ -1,0 +1,91 @@
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  align-items: center;
+  width: 100%;
+}
+
+.button-div {
+}
+
+.button-back {
+  background: hsl(345deg 100% 37%);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+
+.button-front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background: hsl(345deg 100% 46%);
+  color: white;
+  transform: translateY(-6px);
+}
+
+.button-back:active .button-front {
+  transform: translateY(2px);
+}
+
+/*.death-button {
+  background-color: rgb(222, 12, 12);
+  color: azure;
+  font-family: run2;
+  font-size: 50px;
+  padding: 14px 40px;
+  border-radius: 4px;
+  transition-duration: 0.6s;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 20px #999;
+  cursor: pointer;
+  border: 2px groove black;
+  height: 350px;
+  width: 1000px;
+  border-radius: 30px;
+  position: relative;
+  transition: 0.1s;
+}
+
+.death-button:hover {
+  background-color: azure;
+  color: black;
+  font-family: deadly;
+  font-size: 80px;
+  transform: translateY(4px);
+  box-shadow: 0x 20px #666;
+  border-radius: 30px;
+}
+
+.death-button:active {
+  background-color: azure;
+  color: black;
+  font-family: deadly;
+  font-size: 46px;
+  transform: translateY(4px);
+  box-shadow: 0 2px #666;
+  border-radius: 30px;
+  position: relative;
+}*/
+
+@font-face {
+  font-family: deadly;
+  src: url(/fonts/deadly_killers/deadly-killers.otf);
+}
+
+@font-face {
+  font-family: run2;
+  src: url(/fonts/run_2/run.otf);
+}
+
+@font-face {
+  font-family: heartless;
+  src: url(/fonts/heartless/heartless.ttf);
+}

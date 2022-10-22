@@ -6,23 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <script type="text/javascript" src="main.js"></script> -->
     <script type="text/javascript" src="main-two.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="button.css" />
     <title>Rock Paper Scissors</title>
   </head>
-  <body>
-    <p class="ladies-and-gents">Ladies, and Gentlemen...</p>
-    <p class="loved-by-people">
-      loved by good-looking, unpredictable people everywhere...world famous...
-    </p>
-    <p class="rock">ROCK</p>
-    <p class="paper">PAPIER</p>
-    <p class="scissors">SKISSORS!</p>
-    <br />
-    <p class="cheers">(cheers)</p>
-    <p class="applause">(applause)</p>
-    <br />
-    <p class="make-your-selections">
-      Players please prepare to make your selection, and hit that button right
-      over there!
-    </p>
+  <body class="body">
+    <div class="heading-div">
+      <div class="h-div">
+        <h1 class="header">"ROCK PAPER SCISSORS"&copy;</h1>
+      </div>
+      <div class="heading-break-div">
+        <hr class="heading-break" />
+        <hr class="heading-break-two" />
+        <hr class="heading-break-three" />
+      </div>
+    </div>
+    <div class="intro-instructions-div">
+      <div class="intro-div">
+        <br />
+        <br />
+        <div class="p-div">
+          <p class="ladies-and-gents">
+            Ladies, and Gentlemen...<br />
+            The game loved by good-looking, unpredictable people everywhere . .
+            .<br />
+            world famous . . .
+          </p>
+          <p class="rock">ROCK</p>
+          <hr class="hr-rock" />
+          <p class="paper">PAPER</p>
+          <hr class="hr-paper" />
+          <p class="scissors">SCISSORS!</p>
+          <hr class="hr-scissors" />
+          <p class="applause">(applause)</p>
+        </div>
+      </div>
+      <div class="instructions-div">
+        <p class="applause-two">(applause)</p>
+        <p class="make-your-selection">
+          USERS . . . prepare to make your move versus Master Control. When
+          ready, click the button to arm your weapon and enter your selection,
+          then prepare to receive your destiny! (Disclaimer: "Destiny" changes
+          for each round, five rounds total, "RPS"&copy; makes no guarantees on
+          what destin(ies) you may receive. All rights reserved.)
+        </p>
+        <p class="full-stop">FULL STOP</p>
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <div class="button-div">
+        <button class="button-back">
+          <span class="button-front" id="btn" onclick="playRound()">
+            <strong
+              >ROCK&nbsp;&nbsp;PAPIER&nbsp;&nbsp;SKISSORS<br />CLICK IT</strong
+            ></span
+          >
+        </button>
+
+        <script src="button.js"></script>
+      </div>
+    </div>
   </body>
 </html>

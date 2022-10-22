@@ -1,0 +1,260 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  /*background-image: linear-gradient(360deg, #091516, #111d1d, #030505);*/
+  max-width: 100%;
+  animation-name: gradient-background;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+}
+
+.heading-div {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes gradient-background {
+  0% {
+    background-color: #030504;
+  }
+  6.25% {
+    background-color: #091516;
+  }
+  12.5% {
+    background-color: #030504;
+  }
+  18.75% {
+    background-color: #091516;
+  }
+  25% {
+    background-color: #030504;
+  }
+  31.25% {
+    background-color: #091516;
+  }
+  37.5% {
+    background-color: #030504;
+  }
+  43.75% {
+    background-color: #091516;
+  }
+  50% {
+    background-color: #030504;
+  }
+  56.25% {
+    background-color: #091516;
+  }
+  62.5% {
+    background-color: #030504;
+  }
+  68.75% {
+    background-color: #091516;
+  }
+  75% {
+    background-color: #030504;
+  }
+  81.25% {
+    background-color: #091516;
+  }
+  87.5% {
+    background-color: #030504;
+  }
+  95.75% {
+    background-color: #091516;
+  }
+  100% {
+    background-color: #030504;
+  }
+}
+
+.h-div {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  color: #2f8ca3;
+  font-family: tron;
+  font-size: 80px;
+  font-weight: 0;
+}
+
+.heading-break {
+  border: 3px solid #193f4a;
+}
+
+.heading-break-two {
+  border: 3px dashed #f4af2d;
+}
+
+.heading-break-three {
+  border: 3px solid #193f4a;
+}
+
+.intro-instructions-div {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.intro-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: auto;
+}
+
+/*.p-div {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
+}*/
+
+p {
+  color: #f4af2d;
+  font-family: tron;
+  font-size: 24px;
+  font-weight: 0;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.rock {
+  font-family: tron;
+  font-size: 46px;
+  font-weight: 1000;
+  color: #2f8ca3;
+}
+
+.hr-rock {
+  margin-left: 12px;
+  padding-left: 6px;
+  text-align: left;
+  width: 20%;
+  border: 3px solid #f4af2d;
+}
+
+.paper {
+  font-family: tron;
+  font-size: 54px;
+  font-weight: 1000;
+  color: #2f8ca3;
+}
+
+.hr-paper {
+  margin-left: 12px;
+  padding-left: 6px;
+  text-align: left;
+  width: 38%;
+  border: 3px solid #f4af2d;
+}
+
+.scissors {
+  font-family: tron;
+  font-size: 64px;
+  font-weight: 1000;
+  color: #2f8ca3;
+}
+
+.hr-scissors {
+  margin-left: 12px;
+  padding-left: 6px;
+  text-align: left;
+  width: 60%;
+  border: 3px solid #f4af2d;
+}
+
+.instructions-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-end;
+  max-width: auto;
+  padding-top: 5px;
+  margin-top: 0;
+  margin-right: 0px;
+  padding-right: 6px;
+}
+
+.applause-two {
+  margin-right: 6px;
+  padding-right: 12px;
+}
+
+.make-your-selection {
+  color: #2f8ca3;
+  font-size: 30px;
+  font-weight: 1000;
+  padding-right: 6px;
+}
+
+@font-face {
+  font-family: flynn-bold-italic;
+  src: url(/fonts/flynn/flynn-bold-italic.otf);
+}
+
+@font-face {
+  font-family: flynn-bold;
+  src: url(/fonts/flynn/flynn-bold.otf);
+}
+
+@font-face {
+  font-family: flynn-italic;
+  src: url(/fonts/flynn/flynn-italic.otf);
+}
+
+@font-face {
+  font-family: flynn;
+  src: url(/fonts/flynn/flynn.otf);
+}
+
+@font-face {
+  font-family: tron2;
+  src: url(/fonts/tron/tron.ttf);
+}
+
+@font-face {
+  font-family: tron;
+  src: url(/fonts/tr2n/tr2n.ttf);
+}
+
+@font-face {
+  font-family: misfits;
+  src: url(/fonts/misfits/misfits.ttf);
+}
+
+@font-face {
+  font-family: nightcore;
+  src: url(/fonts/nightcore/nightcore-demo.ttf);
+}
+
+@font-face {
+  font-family: melted;
+  src: url(/fonts/melted_monster/melted-monster.ttf);
+}
+
+@font-face {
+  font-family: deadly;
+  src: url(/fonts/deadly_killers/deadly-killers.otf);
+}
+
+@font-face {
+  font-family: run2;
+  src: url(/fonts/run_2/run.otf);
+}
+
+@font-face {
+  font-family: heartless;
+  src: url(/fonts/heartless/heartless.ttf);
+}
