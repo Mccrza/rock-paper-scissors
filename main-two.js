@@ -1,111 +1,27 @@
-// Return results, don't console.log()
-
-// Return random "Rock" "Paper" "Scissors"
-//let computerSelection = (function getComputerChoice() {
-//  let choices = ["rock", "paper", "scissors"];
-//  let random = choices[Math.floor(Math.random() * choices.length)];
-//  return random;
-//})();
-
-// Prompt player to enter their move, stores move in variable
-//let playerSelection = (function getPlayerChoice() {
-//  let playerPrompt = prompt("What is your move?");
-//  let playerPromptInput = playerPrompt.toLowerCase();
-//  return playerPromptInput;
-//})();
-
 function game() {
   for (let i = 0; i < 5; i++) {
-    let playerSelection = getPlayerChoice();
-    let computerSelection = getComputerChoice();
-    function getComputerChoice() {
-      let choices = ["rock", "paper", "scissors"];
-      let computerChoice = choices[Math.floor(Math.random() * choices.length)];
-      return computerChoice;
-    }
-    function getPlayerChoice() {
-      let playerPrompt = prompt("What is your move?");
-      let playerChoice = playerPrompt.toLowerCase();
-      return playerChoice;
-    }
-    function playRound(playerSelection, computerSelection) {
-      switch (playerSelection && computerSelection) {
-        case playerSelection === "rock" && computerSelection === "scissors":
-        case playerSelection === "paper" && computerSelection === "rock":
-        case playerSelection === "scissors" && computerSelection === "paper":
+    function playRound() {
+      function getComputerChoice() {
+        let choices = ["rock", "paper", "scissors"];
+        let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+        return computerChoice;
+      }
+      function getPlayerChoice() {
+        let playerPrompt = prompt("What is your move?");
+        let playerChoice = playerPrompt.toLowerCase();
+        return playerChoice;
+      }
+      let playerSelection = getPlayerChoice();
+      let computerSelection = getComputerChoice();
+      function playRound() {
+        if (playerSelection === "rock" && computerSelection === "scissors") || (playerSelection === "paper" && computerSelection === "rock") || playerSelection === "scissors" && computerSelection === "paper") {
           alert(`You win! ${playerSelection} beats ${computerSelection}.`);
-          break;
-        case playerSelection === "rock" && computerSelection === "paper":
-        case playerSelection === "paper" && computerSelection === "scissors":
-        case playerSelection === "scissors" && computerSelection === "rock":
-          alert(`You lose! ${computerSelection} beats ${playerSelection}.`);
-          break;
-        case playerSelection === computerSelection:
-          alert(
-            `The result is a draw! ${playerSelection} ties ${computerSelection}.`
-          );
+        } else if (playerSelection === "rock" && computerSelection === "paper") || (playerSelection === "paper" && computerSelection === "scissors") || (playerSelection "scissors" && computerSelection === "rock" ) {
+          alert(`You lose! ${computerSelection} beats ${playerSelection}.`); 
+        } else if (playerSelection === computerSelection) {
+          alert(`The result is a draw! ${playerSelection} ties ${computerSelection}.`)
+        }
       }
     }
   }
 }
-
-// Play one round, evaluate results & declare winner, repeat x5
-/*function game() {
-  for (let i = 0; i < 5; i++) {
-    function getPlayerChoice() {
-      let playerPrompt = prompt("What is your move?");
-      let playerSelection = playerPrompt.toLowerCase();
-      return playerSelection;
-    }
-    function getComputerChoice() {
-      let choices = ["rock", "paper", "scissors"];
-      let computerSelection =
-        choices[Math.floor(Math.random() * choices.length)];
-      return computerSelection;
-    }
-    function playRound(playerSelection, computerSelection) {
-      switch ((playerSelection, computerSelection)) {
-        case playerSelection === "rock" && computerSelection === "scissors":
-        case playerSelection === "paper" && computerSelection === "rock":
-        case playerSelection === "scissors" && computerSelection === "paper":
-          alert(
-            `You win! ${
-              playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)
-            } beats ${
-              computerSelection.charAt(0).toUpperCase() +
-              computerSelection.slice(1)
-            }.`
-          );
-          break;
-        case playerSelection === "rock" && computerSelection === "paper":
-        case playerSelection === "paper" && computerSelection === "scissors":
-        case playerSelection === "scissors" && computerSelection === "rock":
-          alert(
-            `You lose! ${
-              computerSelection.charAt(0).toUpperCase() +
-              computerSelection.slice(1)
-            } beats ${
-              playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)
-            }.`
-          );
-          break;
-        case playerSelection === computerSelection:
-          alert(
-            `The result is a draw! ${
-              playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)
-            } ties ${
-              computerSelection.charAt(0).toUpperCase() +
-              computerSelection.slice(1)
-            }.`
-          );
-      }
-    }
-  }
-}
-// function playRound(playerSelection, computerSelection) {
-// your code here!
-// }
-
-// const playerSelection = "rock";
-// const computerSelection = getComputerChoice();
-// console.log(playRound(playerSelection, computerSelection));*/
