@@ -21,15 +21,15 @@ function game() {
         case (playerSelection === "rock" && computerSelection === "scissors"):
         case (playerSelection === "paper" && computerSelection === "rock"):
         case (playerSelection === "scissors" && computerSelection === "paper"):
-            alert(`You win! ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)} beats ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1).}.`);
+            alert(`You win! ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)} beats ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)}.`);
             break;
         case (playerSelection === "rock" && computerSelection === "paper"):
         case (playerSelection === "paper" && computerSelection === "scissors"):
         case (playerSelection === "scissors" && computerSelection === "rock"):
-            alert(`You lose! ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)} beats ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).}`);
+            alert(`You lose! ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)} beats ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)}.`);
             break;
         case (playerSelection === computerSelection):
-            alert(`The result is a draw! ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)`} ties ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1).}`);
+            alert(`The result is a draw! ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)`} ties ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)}.`);
     }
   }
 }
