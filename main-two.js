@@ -1,7 +1,5 @@
 // Return results, don't console.log()
 
-// Define playRound
-function playRound(playerSelection, computerSelection) {
 // Return random "Rock" "Paper" "Scissors"
 let computerSelection = (function getComputerChoice() {
     let choices = ["rock", "paper", "scissors"];
@@ -15,12 +13,11 @@ let playerSelection = (function getPlayerChoice() {
     let playerPromptInput = playerPrompt.toLowerCase();
     return playerPromptInput;
 })();
-}
 
 // Play one round, evaluate results & declare winner, repeat x5
 function game() {
   for (let i = 0; i < 5; i++) {
-    swtich (playRound(playerSelection, computerSelection)) {
+    switch (playRound(playerSelection, computerSelection)) {
         case (playerSelection === "rock" && computerSelection === "scissors"):
         case (playerSelection === "paper" && computerSelection === "rock"):
         case (playerSelection === "scissors" && computerSelection === "paper"):
