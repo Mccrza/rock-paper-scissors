@@ -16,16 +16,20 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection === "paper" && computerSelection === "rock") ||
     (playerSelection === "scissors" && computerSelection === "paper")
   ) {
-    alert(`You win! ${playerSelection} beats ${computerSelection}.`);
+    alert(
+      `You win! Your ${playerSelection.toUpperCase()} beats Master Control's ${computerSelection.toUpperCase()}.`
+    );
   } else if (
     (playerSelection === "rock" && computerSelection === "paper") ||
     (playerSelection === "paper" && computerSelection === "scissors") ||
     (playerSelection === "scissors" && computerSelection === "rock")
   ) {
-    alert(`You lose! ${computerSelection} beats ${playerSelection}.`);
+    alert(
+      `You lose! Master Control's ${computerSelection.toUpperCase()} beats your ${playerSelection.toUpperCase()}.`
+    );
   } else if (playerSelection === computerSelection) {
     alert(
-      `The result is a draw! ${playerSelection} ties ${computerSelection}.`
+      `The result is a draw! Your ${playerSelection.toUpperCase()} ties with Master Control's ${computerSelection.toUpperCase()}.`
     );
   }
 }
