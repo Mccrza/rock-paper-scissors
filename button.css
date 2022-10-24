@@ -89,3 +89,8 @@
       0 0 20px var(--shadow-color), 0 0 27px var(--shadow-color);
   }
 }
+
+@font-face {
+  font-family: deadly;
+  src: url(/fonts/deadly_killers/deadly-killers.otf);
+}
