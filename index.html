@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <script type="text/javascript" src="main.js"></script> -->
-    <script type="text/javascript" src="main-two.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="button.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Rock Paper Scissors</title>
   </head>
   <body class="body">
@@ -53,13 +52,116 @@
     </div>
     <div class="button-wrapper">
       <div class="button-div">
-        <button class="button-back">
-          <span class="button-front" onclick="playRound()">
+        <button class="button-back" type="button">
+          <span class="button-front" id="bttn" type="button" onclick="game()">
             <strong
               >ROCK&nbsp;&nbsp;PAPIER&nbsp;&nbsp;SKISSORS<br />CLICK IT</strong
             ></span
           >
         </button>
+        <!--<script>
+          function requireAjax(file, callback) {
+            jQuery.getScript(file, callback);
+          }
+
+          document.getElementById("bttn").onclick = function () {
+            requireAjax("main-two.js");
+          };
+        </script> -->
+        <script type="text/javascript">
+          document.getElementById("bttn").onclick = function () {
+            function getComputerChoice() {
+              let choices = ["rock", "paper", "scissors"];
+              let computerChoice =
+                choices[Math.floor(Math.random() * choices.length)];
+              return computerChoice;
+            }
+
+            function getPlayerChoice() {
+              let playerPrompt = prompt("What is your goddamned move");
+              let playerChoice = playerPrompt.toLowerCase();
+              return playerChoice;
+            }
+
+            function playRound(playerSelection, computerSelection) {
+              if (
+                (playerSelection === "rock" &&
+                  computerSelection === "scissors") ||
+                (playerSelection === "paper" && computerSelection === "rock")
+              ) {
+                playerScore += 1;
+                alert(
+                  `You win! Your ${playerSelection.toUpperCase()} beats MasterControl's ${computerSelection.toUpperCase()}.`
+                );
+              } else if (
+                playerSelection == "scissors" &&
+                computerSelection === "paper"
+              ) {
+                playerScore += 1;
+                alert(
+                  `You win! Your ${playerSelection.toUpperCase()} beat MasterControl's ${computerSelection.toUpperCase()}.`
+                );
+              } else if (
+                (playerSelection === "rock" && computerSelection === "paper") ||
+                (playerSelection === "scissors" && computerSelection === "rock")
+              ) {
+                computerScore += 1;
+                alert(
+                  `You lose! MasterControl's ${computerSelection.toUpperCase()} beats your ${playerSelection.toUpperCase()}.`
+                );
+              } else if (
+                playerSelection === "paper" &&
+                computerSelection === "scissors"
+              ) {
+                computerScore += 1;
+                alert(
+                  `You lose! MasterControl's ${computerSelection.toUpperCase()} beat your ${playerSelection.toUpperCase()}.`
+                );
+              } else if (playerSelection === computerSelection) {
+                playerScore += 1;
+                computerScore += 1;
+                alert(
+                  `The result is a draw! Your ${playerSelection.toUpperCase()} ties with MasterControl's ${computerSelection.toUpperCase()}.`
+                );
+              } else {
+                computerScore += 1;
+                alert(
+                  `You lose! MasterControl's ${computerSelection.toUpperCase()} beats your ...${playerSelection.toUpperCase()}.`
+                );
+              }
+            }
+
+            function game() {
+              {
+                for (i = 0; i < 5; i++) {
+                  const computerSelection = getComputerChoice();
+                  const playerSelection = getPlayerChoice();
+                  playRound(playerSelection, computerSelection);
+                }
+                compareScore(playerScore, computerScore);
+                return;
+              }
+            }
+
+            function compareScore() {
+              if (playerScore > computerScore) {
+                alert(
+                  `Victory is yours! SCORE:  You - [ ${playerScore} ] pts vs MasterControl - [ ${computerScore} ] pts`
+                );
+              } else {
+                alert(
+                  `You've suffered a crushing defeat... SCORE:  You - [ ${playerScore} ] pts vs MasterControl - [ ${computerScore} ] pts`
+                );
+              }
+            }
+
+            let playerScore = 0;
+            let computerScore = 0;
+
+            game();
+          };
+        </script>
+        -->
       </div>
     </div>
   </body>
