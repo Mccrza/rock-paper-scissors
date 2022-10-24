@@ -24,52 +24,68 @@
 }
 
 .button-back {
-  background: rgb(172, 1, 44);
+  background: rgb(153, 2, 40);
   border-radius: 28px;
   border: none;
   padding: 0;
   cursor: pointer;
-  outline-offset: 25px;
-  border: 1px solid rgb(72, 1, 18);
+  outline-offset: 10px;
+  border: 1px solid rgb(37, 0, 9);
+}
+
+:root {
+  --shadow-color: #ff9e9e;
+  --shadow-color-light: white;
 }
 
 .button-front {
   display: block;
-  padding-top: 65px;
+  padding-top: 75px;
   padding-bottom: 65px;
   padding-left: 75px;
   padding-right: 75px;
   border-radius: 28px;
-  font-size: 3rem;
-  background: hsl(345deg 100% 46%);
+  font-size: 2.75rem;
+  background: rgb(216, 1, 55);
   color: white;
-  transform: translateY(-45px);
+  transform: translateY(-18px);
   font-family: run2;
   text-align: center;
-  border: 3px solid rgb(120, 2, 31);
+  border: 3px solid rgb(66, 1, 18);
   will-change: transform;
-  transition: transform 150ms;
-  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
-}
-
-.button-back:hover .button-front {
-  transform: translateY(-2px);
-  transform: translateY(-6px);
-  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
-}
-
-.button-back:active .button-front {
-  transform: translateY(-2px);
-  transform: translateY(-2px);
-  transition: transform 34ms;
-}
-
-@font-face {
-  font-family: deadly;
-  src: url(fonts/deadly_killers/deadly-killers.otf);
+  transition: transform 215ms;
+  transition: transform 700ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  animation: neon 2.5s 6s 500;
+  text-shadow: none;
 }
 
 @font-face {
   font-family: run2;
   src: url(fonts/run_2/run.otf);
+}
+
+.button-back:hover .button-front {
+  transform: translateY(-22px);
+  transition: transform 215ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button-back:active .button-front {
+  transform: translateY(-7px);
+  transition: transform 50ms;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: none;
+  }
+  to {
+    text-shadow: -1px -1px 1px var(--shadow-color-light),
+      -1px 1px 1px var(--shadow-color-light),
+      1px -1px 1px var(--shadow-color-light),
+      1px 1px 1px var(--shadow-color-light), 0 0 2px var(--shadow-color-light),
+      0 0 3px var(--shadow-color-light), 0 0 4px var(--shadow-color-light),
+      0 0 5px var(--shadow-color), 0 0 8px var(--shadow-color),
+      0 0 11px var(--shadow-color), 0 0 15px var(--shadow-color),
+      0 0 20px var(--shadow-color), 0 0 27px var(--shadow-color);
+  }
 }
