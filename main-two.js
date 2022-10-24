@@ -59,6 +59,7 @@ function game() {
       playRound(playerSelection, computerSelection);
     }
     compareScore(playerScore, computerScore);
+    return;
   }
 }
 
