@@ -2,10 +2,9 @@
 
 The Odin Project - Javascript Fundamentals Course - Project: Rock Paper Scissors
 
-The title says it all... will be my first Javascript project; a game of Rock-Paper-Scissors played against the computer.
+First JavaScript project, creating a versus-Computer game
+of Rock, Paper, Scissors.
 
-I'll be starting off with a function call, `getComputerChoice`, that will randomly return either `Rock` `Paper` or `Scissors`, and make the computer play. For a single round of Rock Paper Scissors I'll be using a function which takes two parameters - `playerSelection` and `computerSelection` - then returns a string which declares the winner of the round: `"You Lose! Paper beats Rock."`
-
-Next will be the `playRound` function called inside of another function, `game()`, and will keep score and report a winner or loser at the end of the rounds.
-
-Loops will be made utilized to though the rounds, and `prompt()` used to get input from the user, and any additional functions as they may be needed!
+Function `getComputerChoice()` selects the computer's move, while `getPlayerChoice()` prompts the user for input on theirs. Calling the function `game()` takes the arguments `computerSelection` and `playerSelection` from the previously explained functions and sets them to round
+compared with `if...else if` statements on a `for..loop` for five rounds. Score is tallied each round and a winner
+is declared at the conclusion. I've made a simple HTML page using basic CSS which calls the `game()` function from user input (`onclick`).
