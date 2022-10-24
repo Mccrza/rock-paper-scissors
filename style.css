@@ -245,3 +245,8 @@ p {
   font-family: tron;
   src: url(fonts/tr2n/tr2n.ttf);
 }
+
+@font-face {
+  font-family: deadly;
+  src: url(/fonts/deadly_killers/deadly-killers.otf);
+}
