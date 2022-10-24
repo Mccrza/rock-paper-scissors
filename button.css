@@ -13,9 +13,14 @@
   height: 600px;
   justify-content: center;
   align-items: center;
+  padding-top: 85px;
 }
 
 .button-div-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 85px;
 }
 
 .button-back {
